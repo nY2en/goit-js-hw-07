@@ -23,12 +23,11 @@ galleryContainer.addEventListener('click', onGalleryChange);
 function onGalleryChange(e) {
     e.preventDefault();
 
-    const el = e.target;
     if (!e.target.classList.contains('gallery__image')) {
         return;
     }
     let lightbox = new SimpleLightbox('.gallery a', {
         captionDelay: 250,
-        captionType: e.target.alt,
+        captionsData: 'alt',
     });
 }
